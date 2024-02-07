@@ -40,7 +40,7 @@ jobs:
      #finally build your app with the latest command
       - name: Build and test with Maven
         working-directory: simple-api-student/
-        run: mvn -B verify sonar:sonar -Dsonar.projectKey=oumaimartayli -Dsonar.organization=OumaimaRTAYLI -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=OumaimaRTAYLI_devops-tp -Dsonar.organization=oumaimartayli -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
          
   # define job to build and publish docker image
