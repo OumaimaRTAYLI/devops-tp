@@ -10,7 +10,7 @@ on:
 jobs:
   sonarcloud:
     name: SonarCloud
-    needs: test-backend build-and-push-docker-image
+    needs: build-and-push-docker-image
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
