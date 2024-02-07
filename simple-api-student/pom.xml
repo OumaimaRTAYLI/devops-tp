@@ -20,6 +20,13 @@
 		<validation.version>2.0.1.Final</validation.version>
 	</properties>
 
+	<properties>
+		<sonar.projectKey>OumaimaRTAYLI_devops-tp</sonar.projectKey>
+		<sonar.organization>oumaimartayli</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<!-- other properties as needed -->
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
