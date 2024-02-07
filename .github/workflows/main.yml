@@ -10,6 +10,7 @@ on:
 jobs:
   sonarcloud:
     name: SonarCloud
+    needs: test-backend build-and-push-docker-image
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -21,7 +22,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           projectBaseDir: devops-tp/
-          
+
   test-backend: 
     runs-on: ubuntu-22.04
     steps:
