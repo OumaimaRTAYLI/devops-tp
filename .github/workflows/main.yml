@@ -21,7 +21,7 @@ jobs:
         env: 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          projectBaseDir: devops-tp/
+          projectBaseDir: /github/workspace/devops-tp
 
   test-backend: 
     runs-on: ubuntu-22.04
