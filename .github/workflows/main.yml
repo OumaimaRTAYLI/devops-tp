@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
      #checkout your github code using actions/checkout@v2.5.0
-      - uses: actions/checkout@v2.5.0
-      - 
+      - name: Checkout code
+        uses: actions/checkout@v2.5.0
 
      #do the same with another action (actions/setup-java@v3) that enable to setup jdk 17
       - name: Set up JDK 17
