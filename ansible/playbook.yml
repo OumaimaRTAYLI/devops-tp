@@ -1,0 +1,12 @@
+# Install Docker
+- hosts: all
+  gather_facts: false
+  become: true
+  vars_files:
+    - group_vars/var.yml
+  roles:
+    - docker # install docker
+    - network # créer un network pour les containers
+    - database # lancer la database
+    - app # lancer le backend
+    - proxy # lancer le reverse proxy

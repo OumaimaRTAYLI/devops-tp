@@ -26,7 +26,7 @@ services:
       - db
       
   my-apache-server:
-    build: http
+    build: httpserver/http
     container_name: my-apache-server-container
     ports:
       - "8081:80"

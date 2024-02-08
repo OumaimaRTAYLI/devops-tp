@@ -1,6 +1,0 @@
-- name: pull database image
-  docker_image:
-    name: postgres
-    image: oumrt/tp-devops-database 
-    ports: 8090:8080
-  pull: true

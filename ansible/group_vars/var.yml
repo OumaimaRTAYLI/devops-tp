@@ -1,0 +1,11 @@
+#db
+POSTGRES_CONTAINER: postgres-db
+POSTGRES_DB: db
+POSTGRES_USER: usr
+POSTGRES_PASSWORD: pwd
+
+# docker network
+DOCKER_NETWORK: app-network
+
+#backend
+API_CONTAINER: springboot-app-container

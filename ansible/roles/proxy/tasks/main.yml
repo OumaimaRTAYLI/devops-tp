@@ -1,0 +1,14 @@
+---
+# tasks file for roles/proxy
+- name: Run HTTPD
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  docker_container:
+    name: httpd
+    image: oumrt/tp-devops-http:latest
+    networks:
+      - name: "{{ DOCKER_NETWORK }}" 
+    ports:
+      - 8080:80
+    recreate: true
+    pull: true

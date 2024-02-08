@@ -1,0 +1,17 @@
+---
+# tasks file for roles/app
+- name: Run Backend API
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  docker_container:
+    name: "{{ API_CONTAINER }}" 
+    image: oumrt/tp-devops-simple-api:latest
+    networks:
+      - name: "{{ DOCKER_NETWORK }}" 
+    env:
+      URL: "{{ POSTGRES_CONTAINER }}:5432" 
+      POSTGRES_DB: "{{ POSTGRES_DB }}" 
+      POSTGRES_USER: "{{ POSTGRES_USER }}" 
+      POSTGRES_PASSWORD: "{{ POSTGRES_PASSWORD }}"
+    recreate: true
+    pull: true
