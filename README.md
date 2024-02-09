@@ -62,7 +62,8 @@ COPY ./db/01-CreateScheme.sql /docker-entrypoint-initdb.d
 COPY ./db/02-InsertData.sql /docker-entrypoint-initdb.d
 ```
 
-- Tree : 
+- Tree :
+
 ![db](images/tree.png)
 
 ## 2. Backend API v1
@@ -669,8 +670,6 @@ roles:
     - app # lance le backend
     - proxy # lance le reverse proxy
 ```
-
-## Deploy your App :
 
 Après création des rôles spécifiés, chacun doit exécuté une tâche. Leur ordre est important, il faut donc faire attention. Dans la continuité de nos secrets github, il faut rajouter des variables d'environements pour les **urls**, les **noms des containers**, le **réseau**,et les **tokens**.
 
